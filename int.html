@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Infosphere Report - Speciale Elezioni italiane 2022</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="https://sonycslparis.github.io/COVID/assets/images/favicon.ico">
+<link rel="stylesheet" href="./temp_title/w3.css">
+<script src="./temp_title/jquery.min.js"></script>
+<script src="./temp_title/plotly-latest.min.js" id="plotlyjs"></script><style id="plotly.js-style-global"></style>
+<script>
+
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+
+
+</script>
+
+
+<link rel="stylesheet" href="./temp_title/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link rel="stylesheet" href="./temp_title/my_css.css">
+
+
+</head>
+<body>
+<h1> CHI PARLA CON CHI</h1>
+<p>I politici sui social non interagiscono solo con il proprio seguito ma anche tra di loro. Tuttavia non sempre sono corrisposti! Nella seguente rappresentazione i politici sono collegati e posizionati in base a quanto interagiscono l'uno con l'altro. Politici che si taggano spesso sono quindi più vicini. Passa il mouse sulle loro immagini per scoprire quanto interagiscono con gli altri. Passando invece sui collegamente, puoi scoprire con che frequenza ciascuno contatta l'altro, ed individuare le molte asimmetrie della comunicazione politica. 
+</p>
+<div id="observablehq-chart-c4c719e0" style="overflow: hidden;"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/cfe34f1d9f952c55.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-c4c719e0"));
+});
+</script>
+
+
+</body>
+</html>

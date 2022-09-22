@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Infosphere Report - Speciale Elezioni italiane 2022</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="https://sonycslparis.github.io/COVID/assets/images/favicon.ico">
+<link rel="stylesheet" href="./temp_title/w3.css">
+<script src="./temp_title/jquery.min.js"></script>
+<script src="./temp_title/plotly-latest.min.js" id="plotlyjs"></script><style id="plotly.js-style-global"></style>
+
+
+<link rel="stylesheet" href="./temp_title/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link rel="stylesheet" href="./temp_title/my_css.css">
+<style>
+
+.clashbutton{
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin: 5px;
+  font-size: large;
+  font-weight: 900;
+  border: 1px solid darkgray;
+  text-align: center;
+}
+.clashbutton:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.clashbutton img{
+  width: 40px;
+}
+.clashbutton div{
+  display: inline-block;
+  font-size: small;
+  font-weight: 100;
+}
+
+#clash_header{
+  width: 350px;
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin: 5px;
+  font-size: large;
+  font-weight: 900;
+  border: 1px solid darkgray;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+#clash_header p{
+  font-size: small;
+  font-weight: 100;
+}
+#clash_header *{
+  display: inline-block;
+}
+
+#clash_header img{
+  width: 100px;
+}
+
+
+</style>
+
+</head>
+<body>
+  <h1> SCONTRO ALL'ULTIMA PAROLA </h1>
+  <h3> Un'indagine sulle differenti parole-chiave dei politici sui social! </h3>
+  <p>Chi userà di più la parola “immigrazione” nei propri post tra Meloni e Salvini? E chi “giovani” tra Meloni e Conte? Clicca sulla coppia di politici per scoprirlo! 
+
+  In questa sezione, abbiamo messo a confronto diverse coppie di politici per capire quali parole sono statisticamente più usate dall’uno e poco usate nell’altro. In questa pagina, potrai infatti visualizzare le differenze nel modo in cui singole parole sono utilizzate da sei prominenti politici : Giorgia Meloni, Matteo Salvini, Giuseppe Conte, Carlo Calenda, Silvio Berlusconi ed Enrico Letta.
+  </p>
+
+  <div id="clash">
+
+  </div>
+  <hr>
+  <center>
+  <div id="clash_header">
+    <h4> ⬆⬆⬆ Scegli un confronto ⬆⬆⬆</h4>
+  </div>
+</center>
+  <iframe id="clash_frame" width="100%" height="800px" src="" ></iframe>
+
+
+<script>
+var myStringArray = [
+"Berlusconi_Calenda.html",
+"Berlusconi_Conte.html",
+"Berlusconi_Letta.html",
+"Conte_Calenda.html",
+"Conte_Letta.html",
+"Letta_Calenda.html",
+"Meloni_Berlusconi.html",
+"Meloni_Calenda.html",
+"Meloni_Conte.html",
+"Meloni_Letta.html",
+"Meloni_Salvini.html",
+"Salvini_Berlusconi.html",
+"Salvini_Calenda.html",
+"Salvini_Conte.html",
+"Salvini_Letta.html"]
+
+var arrayLength = myStringArray.length;
+for (var i = 0; i < arrayLength; i++) {
+    p1 = myStringArray[i].split('.')[0].split('_')[0]
+    p2 = myStringArray[i].split('.')[0].split('_')[1]
+//    $( "#clash" ).append( "<a class='clashbutton' href='clash/"+myStringArray[i]+"'>  <div><img src='temp_title/"+p1.toLowerCase()+".png' width='50px'><br>"+p2+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png' width='50px'><br>"+p2+"</div> " );
+    $( "#clash" ).append( "<a class='clashbutton' onClick='show_clash(\"clash/"+myStringArray[i]+"\")'>  <div><img src='temp_title/"+p1.toLowerCase()+".png'><br>"+p2+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png'><br>"+p2+"</div> </a>" );
+    }
+
+    
+
+function show_clash(toload) {
+    document.getElementById('clash_frame').src = toload;
+    p1 = toload.split('.')[0].split('/')[1].split('_')[0]
+    p2 = toload.split('.')[0].split('/')[1].split('_')[1]
+    $('#clash_header').html("<div><img src='temp_title/"+p1.toLowerCase()+".png'><br>"+p2+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png'><br>"+p2+"</div> <p>Scrolla per visualizzare le parole distintive!</p><br>⬇⬇⬇")
+} 
+</script>
+
+</body>
+</html>
