@@ -110,7 +110,7 @@ for (var i = 0; i < arrayLength; i++) {
     p1 = myStringArray[i].split('.')[0].split('_')[0]
     p2 = myStringArray[i].split('.')[0].split('_')[1]
 //    $( "#clash" ).append( "<a class='clashbutton' href='clash/"+myStringArray[i]+"'>  <div><img src='temp_title/"+p1.toLowerCase()+".png' width='50px'><br>"+p2+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png' width='50px'><br>"+p2+"</div> " );
-    $( "#clash" ).append( "<a class='clashbutton' onClick='show_clash(\"clash/"+myStringArray[i]+"\")'>  <div><img src='temp_title/"+p1.toLowerCase()+".png'><br>"+p2+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png'><br>"+p2+"</div> </a>" );
+    $( "#clash" ).append( "<a class='clashbutton' onClick='show_clash(\"clash/"+myStringArray[i]+"\")'>  <div><img src='temp_title/"+p1.toLowerCase()+".png'><br>"+p1+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png'><br>"+p2+"</div> </a>" );
     }
 
     
@@ -119,7 +119,7 @@ function show_clash(toload) {
     document.getElementById('clash_frame').src = toload;
     p1 = toload.split('.')[0].split('/')[1].split('_')[0]
     p2 = toload.split('.')[0].split('/')[1].split('_')[1]
-    $('#clash_header').html("<div><img src='temp_title/"+p1.toLowerCase()+".png'><br>"+p2+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png'><br>"+p2+"</div> <p>Scrolla per visualizzare le parole distintive!</p><br>⬇⬇⬇")
+    $('#clash_header').html("<div><img src='temp_title/"+p1.toLowerCase()+".png'><br>"+p1+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png'><br>"+p2+"</div> <p>Scrolla per visualizzare le parole distintive!</p><br>⬇⬇⬇")
 } 
 </script>
 
