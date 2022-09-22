@@ -63,7 +63,12 @@
   width: 100px;
 }
 
-
+#clash_frame {
+  background-color: white;
+  border: 1px solid darkgray;
+  text-align: center;
+  display: none;
+}
 </style>
 
 </head>
@@ -120,6 +125,8 @@ function show_clash(toload) {
     p1 = toload.split('.')[0].split('/')[1].split('_')[0]
     p2 = toload.split('.')[0].split('/')[1].split('_')[1]
     $('#clash_header').html("<div><img src='temp_title/"+p1.toLowerCase()+".png'><br>"+p1+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png'><br>"+p2+"</div> <p>Scrolla per visualizzare le parole distintive!</p><br>⬇⬇⬇")
+    $('#clash_frame').fadeIn()
+
 } 
 </script>
 

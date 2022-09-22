@@ -91,7 +91,7 @@ var arrayLength = myStringArray.length;
 for (var i = 0; i < arrayLength; i++) {
     p1 = myStringArray[i].split('.')[0]
 //    $( "#clash" ).append( "<a class='clashbutton' href='clash/"+myStringArray[i]+"'>  <div><img src='temp_title/"+p1.toLowerCase()+".png' width='50px'><br>"+p2+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png' width='50px'><br>"+p2+"</div> " );
-    $( "#dialects" ).append( "<a class='clashbutton' onClick='show_clash(\"dialects/"+myStringArray[i]+"\")'>  <div><img src='temp_title/"+p1.toLowerCase().replace(/\s/g, '')+".png'><br>"+p1+"</div>" );
+    $( "#dialects" ).append( "<a class='clashbutton' onClick='show_clash(\"dialects/"+myStringArray[i]+"\")'>  <div><img src='temp_title/"+p1.toLowerCase().replace(/\s/g, '')+".png'><br>"+p1+"</div></a>" );
     }
 
     
