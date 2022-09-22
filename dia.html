@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Infosphere Report - Speciale Elezioni italiane 2022</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="https://sonycslparis.github.io/COVID/assets/images/favicon.ico">
+<link rel="stylesheet" href="./temp_title/w3.css">
+<script src="./temp_title/jquery.min.js"></script>
+<script src="./temp_title/plotly-latest.min.js" id="plotlyjs"></script><style id="plotly.js-style-global"></style>
+
+
+<link rel="stylesheet" href="./temp_title/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link rel="stylesheet" href="./temp_title/my_css.css">
+<style>
+
+.clashbutton{
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin: 5px;
+  font-size: large;
+  font-weight: 900;
+  border: 1px solid darkgray;
+  text-align: center;
+}
+.clashbutton:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.clashbutton img{
+  width: 40px;
+}
+.clashbutton div{
+  display: inline-block;
+  font-size: small;
+  font-weight: 100;
+}
+
+#map_frame{
+  width: 800px !important;
+  height: 800px !important;
+}
+</style>
+
+</head>
+<body>
+  <h1> IL DIALETTO DELLA POLITICA </h1>
+  <h3>La politica é anche contatto col territorio, ma a quale territorio sono più simili i politici? </h3>
+  <p>In questa analisi confrontiamo la frequenza dei termini usati dai politici con quella dei termini contenuti nelle testate regionali. Se tendono a usare le stesse parole i linguaggi del politico e quello delle testate locali sono simili. Questo puo' indicare che trattano gli stessi temi, che usano gli stessi termini dialettali, o che il colorito linguistico e` simile. Nella mappa le regioni piu' accese corrispondono a una maggiore somiglianza al politico.</p>
+  <hr>
+
+  <div id="dialects">
+
+  </div>
+  <hr>
+  <center>
+  <iframe id="map_frame" src="" ></iframe>
+  </center>
+
+<script>
+var myStringArray = [
+"Berlusconi.html",
+"Bonino.html",
+"Brugnaro.html",
+"Calenda.html",
+"Conte.html",
+"De Magistris.html",
+"De Poli.html",
+"Di Maio.html",
+"Fratoianni.html",
+"Letta.html",
+"Lupi.html",
+"Meloni.html",
+"Paragone.html",
+"Salvini.html",
+"Speranza.html",
+"Toti.html",
+]
+
+var arrayLength = myStringArray.length;
+for (var i = 0; i < arrayLength; i++) {
+    p1 = myStringArray[i].split('.')[0]
+//    $( "#clash" ).append( "<a class='clashbutton' href='clash/"+myStringArray[i]+"'>  <div><img src='temp_title/"+p1.toLowerCase()+".png' width='50px'><br>"+p2+"</div> VS <div><img src='temp_title/"+p2.toLowerCase()+".png' width='50px'><br>"+p2+"</div> " );
+    $( "#dialects" ).append( "<a class='clashbutton' onClick='show_clash(\"dialects/"+myStringArray[i]+"\")'>  <div><img src='temp_title/"+p1.toLowerCase().replace(/\s/g, '')+".png'><br>"+p1+"</div>" );
+    }
+
+    
+
+function show_clash(toload) {
+    document.getElementById('map_frame').src = toload;
+} 
+</script>
+
+</body>
+</html>
