@@ -42,6 +42,13 @@
 #map_frame{
   width: 800px !important;
   height: 800px !important;
+  display: none;
+  overflow: hidden !important;
+}
+
+#dialects{
+  margin:0 20%;
+  text-align: center;
 }
 </style>
 
@@ -57,7 +64,7 @@
   </div>
   <hr>
   <center>
-  <iframe id="map_frame" src="" ></iframe>
+  <iframe id="map_frame" class="clashbutton" src=""></iframe>
   </center>
 
 <script>
@@ -90,7 +97,8 @@ for (var i = 0; i < arrayLength; i++) {
     
 
 function show_clash(toload) {
-    document.getElementById('map_frame').src = toload;
+  document.getElementById('map_frame').src = toload;
+  $('#map_frame').fadeIn()
 } 
 </script>
 
