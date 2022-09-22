@@ -96,7 +96,7 @@ Scopri le nostre analisi:
 <a onClick="newSite('par.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> forum </span> Scontro all'ultima parola</a>
 <a onClick="newSite('rea.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> add_reaction </span> Reazioni social</a>
 <a onClick="newSite('int.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> alternate_email </span> Chi parla con chi</a>
-<a onClick="newSite('dati.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> database </span> Dati e ringraziamenti</a>
+<a onClick="newSite('dat.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> database </span> Dati e ringraziamenti</a>
 
 </div>
 <hr style="margin: 5px;">
@@ -198,7 +198,8 @@ function w3_close() {
   }
 
   function newSite(toload) {
-    $("#intro").hide(0)
+   $("#intro").hide(0)
+   $("#myIframe").show()
     document.getElementById('myIframe').src = toload;
 } 
 
