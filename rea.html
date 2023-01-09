@@ -37,11 +37,6 @@
 .clashbutton img{
   width: 40px;
 }
-.clashbutton div{
-  display: inline-block;
-  font-size: small;
-  font-weight: 100;
-}
 
 #clash_header{
   width: 350px;
@@ -72,24 +67,69 @@
    width: 1200px !important;
 
 }
-#tot_rea_chart{
+#tot_rea_chart1{
    height: 600px !important;
-   width: 1200px !important;
+   width: 80% !important;
+   margin: 0 10%;
+
+}
+#tot_rea_chart2{
+   height: 600px !important;
+   width: 80% !important;
+   margin: 0 10%;
+
+}
+#tot_rea_chart2_iframe{
+   height: 500px !important;
+   width: 100% !important;
+}
+
+.rotate {
+transform: rotate(-90deg);
+/* Legacy vendor prefixes that you probably don't need... */
+/* Safari */
+-webkit-transform: rotate(-90deg);
+/* Firefox */
+-moz-transform: rotate(-90deg);
+/* IE */
+-ms-transform: rotate(-90deg);
+/* Opera */
+-o-transform: rotate(-90deg);
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.chart_labels{
+  display: block;
 
 }
 
+#lab_cont {
+  width: 200px;
+}
 </style>
 
 </head>
 <body>
   <h1> REAZIONI SOCIAL </h1>
   <h3> Quanto interagiamo con i contenuti pubblicati dai politici italiani? E quale sentimento suscitano in noi le loro parole? </h3>
-  <p>Abbiamo analizzato come gli utenti Facebook utilizzano le sette <i>reactions</i> (<i>ahah, angry, care, like, love, sad, wow</i>) a disposizione per interagire con i post pubblicati dai principali leader politici italiani. Per fare questo, abbiamo diviso l'intervallo di tempo analizzato (01/07/2019 - 10/09/2022) in tre sottoperiodi: prima, durante e dopo il Governo Draghi.<br>
-    Il grafico a sinistra mostra il totale delle reazioni ai post pubblicati dai diversi politici durante il periodo selezionato. Il grafico a destra mostra come i diversi politici si dispongono all'interno di un ettagono in base alla distribuzione del totale suddetto tra le diverse reazioni coincidenti con i vertici del poligono. Più alta la percentuale di un certo tipo di reazione, più vicina sarà la posizione del politico al vertice corrispondente.<br>
-    N.B. Per migliorare la leggibilità del grafico, tale rappresentazione è basata su una metrica che bilancia la distribuzione tenendo conto della naturale predominanza di <i>like</i>.
-    </p>
-  <iframe id="tot_rea_chart" class="clashbutton" src="reactions/reazioni_totale.html" ></iframe>
+  <p>
+  Abbiamo analizzato come gli utenti Facebook utilizzano le sette reactions (<i>ahah, angry, care, like, love, sad, wow</i>) a disposizione per interagire con i post pubblicati dai principali leader politici italiani. Per fare questo, abbiamo diviso l'intervallo di tempo analizzato in due sottoperiodi: prima del periodo elettorale (01/07/2019 - 20/07/2022) e durante il periodo elettorale (21/07/2022 - 19/09/2022).<br>
+  I grafici in basso mostrano quante reazioni hanno ricevuto in media i post Facebook di ogni politico nei due periodi analizzati. Il colore associato ad ogni politico corrisponde al partito o coalizione di appartenenza.<br>
+  I grafici in alto mostrano come i diversi politici si dispongono all'interno di un ettagono in base alla distribuzione del totale tra le sette reaction coincidenti con i vertici del poligono. Più alta la percentuale di un certo tipo di reazione, più vicina sarà la posizione del politico al vertice corrispondente.<br>
+  N.B. Per migliorare la leggibilità del grafico, tale rappresentazione è basata su una metrica che bilancia la distribuzione tenendo conto della naturale predominanza di <i>like</i> (Le esatte distribuzioni delle reazioni associate ad ogni politico sono invece visualizzabili posizionando il mouse sull'immagine corrispondente).
+  </p>
+  <iframe id="tot_rea_chart1" class="clashbutton" src="rea_chart1.html" ></iframe>
   
+  <p>
+  Il grafico seguente mostra quanto (in termini di distanza euclidea) la posizione di ogni politico è cambiata tra prima e durante il periodo elettorale. Anche qui, ad ogni politico è associato il colore del partito o coalizione di appartenenza. Al passaggio del mouse sulla barra corrispondente, il testo in sovraimpressione mostra il valore esatto della distanza calcolata e le tre reactions che maggiormente hanno contribuito (in valore assoluto) allo spostamento (segno positivo per reazione aumentata durante il periodo elettorale, segno negativo per reazione diminuita).<br>
+  E' interessante notare come solamente gli ex-5S Di Maio e Speranza (ora al centro-sinistra) abbiano assistito ad una netta diminuzione di reazioni positive (<i>like</i> e <i>love</i>) ai propri post. Nella coalizione di centro-destra invece, i post di Meloni e Salvini, oltre all'aumento di feedback positivi, hanno anche visto la netta diminuzione di <i>angry</i>, a conferma probabilmente dell'efficacia del cambio di strategia comunicativa nel periodo elettorale. L'aumento di reazioni positive ha anche accompagnato la scelta di Calenda e Renzi di unirsi nella formazione del Terzo Polo.      
+  </p>
+  <div id="tot_rea_chart2" class="clashbutton" >
+    <iframe id="tot_rea_chart2_iframe" src="rea_chart2.html" ></iframe>
+  </div>
+
+
 <script>
 
 function show_clash(toload) {
