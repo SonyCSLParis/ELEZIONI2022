@@ -69,6 +69,17 @@
   text-align: center;
   display: none;
 }
+
+#prepost_frame{
+  background-color: white;
+  border: 1px solid darkgray;
+  text-align: center;
+}
+
+#clash_frame,#prepost_frame:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
 </style>
 
 </head>
@@ -76,8 +87,7 @@
   <h1> SCONTRO ALL'ULTIMA PAROLA </h1>
   <h3> Un'indagine sulle differenti parole-chiave dei politici sui social! </h3>
   <p>Chi userà di più la parola “immigrazione” nei propri post tra Meloni e Salvini? E chi “giovani” tra Meloni e Conte? Clicca sulla coppia di politici per scoprirlo! 
-
-  In questa sezione, abbiamo messo a confronto diverse coppie di politici per capire quali parole sono statisticamente più usate dall’uno e poco usate nell’altro. In questa pagina, potrai infatti visualizzare le differenze nel modo in cui singole parole sono utilizzate da sei prominenti politici : Giorgia Meloni, Matteo Salvini, Giuseppe Conte, Carlo Calenda, Silvio Berlusconi ed Enrico Letta.
+  In questa sezione, abbiamo messo a confronto diverse coppie di politici per capire quali parole sono statisticamente più usate dall'uno e poco usate nell'altro. In questa pagina, potrai infatti visualizzare le differenze nel modo in cui singole parole sono utilizzate da sei prominenti politici : Giorgia Meloni, Matteo Salvini, Giuseppe Conte, Carlo Calenda, Silvio Berlusconi ed Enrico Letta.
   </p>
 
   <div id="clash">
@@ -90,7 +100,14 @@
   </div>
 </center>
   <iframe id="clash_frame" width="100%" height="800px" src="" ></iframe>
+<br>
+  <h3> Com'è cambiato il dibattito politico per la campagna elettorale? Quali parole sono diventate più importanti rispetto a prima? 
+  </h3>
+  <p>Per capirlo, in questa sezione, abbiamo messo a confronto due differenti dataset per capire quali parole sono statisticamente più usate nel panorama social dei politici durante il governo Draghi e nel periodo durante e appena dopo le elezioni. Il nostro dataset di riferimento per il periodo prima della campagna elettorale comprende i post pubblicati tra il Febbraio 2021, inizio del governo Draghi e il Luglio 2022, data delle sue dimissioni. Il dataset di riferimento per analizzare la campagna elettorale va dal Luglio 2022 fino alla fine dei dati disponibili, ossia settembre 2022. Ogni punto corrisponde all'uso di una parola. Le parole che sono in alto sull'asse delle ordinate sono quelle che sono state le più usate durante il governo Draghi ma poco frequentemente nel periodo appena dopo. Le posizioni delle parole corrispondono alle loro frequenze : banche, economia e migranti sono alcune delle parole, insieme a “fratelli”, probabilmente in riferimento al partito fratelli d'Italia, sono alcune delle parole che hanno dominato il dibattito politico durante. 
+  </p>
 
+  <iframe id="prepost_frame" width="100%" height="800px" src="par_prepost.html" ></iframe>
+  
 
 <script>
 var myStringArray = [

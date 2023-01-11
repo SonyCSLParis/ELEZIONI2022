@@ -22,7 +22,19 @@
 
 <link rel="stylesheet" href="./temp_title/my_css.css">
 
+<style>
 
+.if_class {
+  background-color: white;
+  border: 1px solid darkgray;
+}
+
+.if_class:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+</style>
 </head>
 <body>
 <h1> CHI PARLA CON CHI </h1>
@@ -30,13 +42,56 @@
 
 <p>I politici sui social non interagiscono solo con il proprio seguito ma anche tra di loro. Tuttavia non sempre sono corrisposti! Nella seguente rappresentazione i politici sono collegati e posizionati in base a quanto interagiscono l'uno con l'altro. Politici che si taggano spesso sono quindi più vicini. Passa il mouse sulle loro immagini per scoprire quanto interagiscono con gli altri. Passando invece sui collegamenti, puoi scoprire con che frequenza ciascuno contatta l'altro, ed individuare le molte asimmetrie della comunicazione politica. 
 </p>
-<div id="observablehq-chart-c4c719e0" style="overflow: hidden; height: 600px !important;"></div>
+
+<div id="observablehq-chart-c4c719e0" class="if_class" style="overflow: hidden; height: 600px !important;margin: 2% 4%;"></div>
+<h3> La campagna elettorale nei tag!</h3>
+
+<p>
+  Ogni politico ha taggato gli altri ed è stato taggato a sua volta un certo numero di volte. Ma in molti casi c'e' una grande sproporzione: la politica che ha ricevuto più tag (oltre 300) era Giorgia Meloni, probabilmente al centro dell'attenzione in quanto vincitrice annunciata. Tuttavia ne essa ne ha fatti solo 46, con un rapporto di 7 tag ricevuti per ogni tag fatto. Invece il politico più attivo si é rivelato Calenda, ma con un rapporto tag fatti su tag ricevuti di 0.195 (cioé un tag ricevuto ogni 5 tag fatti circa). Non sempre essere molto attivi "paga" in termini di tag ricevuti (come nel caso di Paragone), ma é importante tenere a mente che ricevere tag non é necessariamente una cosa positiva o un indice di successo.
+</p>
+<center>
+<div class="if_class" style="margin: 2% 4%;">
+    <div  style="width: 20%; display: inline-block; text-align: left;vertical-align: top;">
+    <ol>
+      <h4>Tag ricevuti per ogni tag fatto</h4>
+      <li> Speranza (60.5) </li>
+      <li> Meloni (7.13) </li>
+      <li> Berlusconi (3.96) </li>
+      <li> Bonelli (3.0) </li>
+      <li> Salvini (2.84) </li>
+      <li> Dimaio (2.54) </li>
+      <li> Letta (1.69) </li>
+      <li> Conte (1.34) </li>
+      <li> Lupi (1.33) </li>
+      <li> Renzi (1.05) </li>
+      <li> Bonino (0.909) </li>
+      <li> Brugnaro (0.5) </li>
+      <li> Fratoianni (0.44) </li>
+      <li> Toti (0.216) </li>
+      <li> Calenda (0.195) </li>
+      <li> Demagistris (0.0125) </li>
+      <li> Depoli (0.0) </li>
+      <li> Paragone (0.0) </li>
+    </ol>
+    </div>
+    <div id="observablehq-graph-76f1cc0d" style="overflow: hidden; display: inline-block; width: 70%; "></div>
+    <div style="text-align: right; font-size: smaller; margin: 10px; color: darkgray;">N.B. Nel grafico, é stato aggiunto un tag fatto e ricevuto a tutti per poter mostrare anche valori nulli nella scala logaritmica.</div>
+</div>
+</center>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/cfe34f1d9f952c55.js?v=3";
 new Runtime().module(define, name => {
   if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-c4c719e0"));
 });
+
+import define2 from "https://api.observablehq.com/d/3ebd80e207afe671.js?v=3";
+new Runtime().module(define2, name => {
+  if (name === "graph") return new Inspector(document.querySelector("#observablehq-graph-76f1cc0d"));
+});
+
 </script>
 
 

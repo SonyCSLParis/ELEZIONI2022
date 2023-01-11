@@ -35,6 +35,9 @@
 
 <style>
 
+.string_it {
+   font-size: inherit;
+}
 .mainbutton{
      display: inline-block;
      background-color: white;
@@ -48,6 +51,10 @@
    }
    .mainbutton span{
      font-size: 50px;
+   }
+
+   .mainbutton p {
+      line-height: 0%;
    }
    .mainbutton:hover {
      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
@@ -74,12 +81,14 @@
    <a class="w3-bar-item w3-button w3-right w3-padding" onclick="window.location=&#39;index.html&#39;+window.location.search;"> <span class="material-symbols-outlined">
       home
       </span></a> 
-<!--       <img class="w3-bar-item w3-padding" src="./temp_title/infosphere_rev.webp" style="height: 40px;">-->
+<!--      <a class="w3-bar-item w3-button w3-right w3-padding" onclick="">🇮🇹</a>
+      <a class="w3-bar-item w3-button w3-right w3-padding" onclick="">🇬🇧</a>
+       <img class="w3-bar-item w3-padding" src="./temp_title/infosphere_rev.webp" style="height: 40px;">-->
 
 <a class="w3-bar-item w3-button w3-padding" onclick="window.location=&#39;index.html&#39;+window.location.search;" style="height:47px">
    <span >  SONY CSL Infosphere Report <span class="material-symbols-outlined" style="vertical-align:middle;"> query_stats </span> </span>
       
-      <span >  Speciale Elezioni Italiane 2022 <span class="material-symbols-outlined" style="vertical-align:middle;"> how_to_vote </span></span>
+      <span >  <span class="string_it">Speciale Elezioni Italiane 2022 </span><span class="material-symbols-outlined" style="vertical-align:middle;"> how_to_vote </span></span>
       </a>
 
 <!--   <a onClick="newSite('emanuele.html')" class="w3-bar-item w3-button w3-right w3-padding">Emanuele</a>
@@ -93,26 +102,28 @@
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
    <div class="w3-container w3-row" style="text-align: right;">
-      <h3 style="margin: 0;">ANALISI DEL DIBATTITO POLITICO</h3>
-     <p style="font-size: .95em; line-height: 110%;color: darkslategray;"> Come parlano i politici? A chi si rivolgono? E come reagiscono le comunità coinvolte? La comunicazione politica é molto cambiata negli ultimi anni. Il nostro studio permette di capire qualcosa in più sul dibattito politico social durante le elezioni politiche italiane del 2022.
+      <h3 style="margin: 0;"> <span class="string_it">ANALISI DEL DIBATTITO POLITICO</span></h3>
+     <p style="font-size: .95em; line-height: 110%;color: darkslategray;"> <span class="string_it">Come parlano i politici? A chi si rivolgono? E come reagiscono le comunità coinvolte? La comunicazione politica é molto cambiata negli ultimi anni. Il nostro studio permette di capire qualcosa in più sul dibattito politico social durante le elezioni politiche italiane del 2022.</span>
      </p>
   </div>
   <div class="w3-container w3-bar-block">
 <hr style="margin: 5px;">
 
-Scopri le nostre analisi:
-<a onClick="newSite('cop.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> travel_explore </span> Dove si parla di politica?</a>
-<a onClick="newSite('dia.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> person_pin_circle </span> Il dialetto politico</a>
-<a onClick="newSite('par.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> forum </span> Scontro all'ultima parola</a>
-<a onClick="newSite('rea.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> add_reaction </span> Reazioni social</a>
-<a onClick="newSite('int.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> alternate_email </span> Chi parla con chi</a>
-<a onClick="newSite('dat.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> database </span> Dati e ringraziamenti</a>
+<span class="string_it">Scopri le nostre analisi:</span>
+<a onClick="newSite('cop.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> travel_explore </span><span class="string_it"> Dove si parla di politica?</span></a>
+<a onClick="newSite('dia.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> person_pin_circle </span><span class="string_it"> Il dialetto politico</span></a>
+<a onClick="newSite('par.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> forum </span><span class="string_it"> Scontro all'ultima parola</span></a>
+<a onClick="newSite('rea.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> add_reaction </span><span class="string_it"> Reazioni social</span></a>
+<a onClick="newSite('int.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> alternate_email </span><span class="string_it"> Chi parla con chi</span></a>
+<a onClick="newSite('dat.html')" class="w3-bar-item w3-button"><span class="material-symbols-outlined"> database </span><span class="string_it"> Dati e ringraziamenti</span></a>
 
 </div>
 <hr style="margin: 5px;">
 <div class="w3-container w3-bar-block" style="font-size: .85em; line-height: 110%;">
    <p style="color: darkslategray;">
+      <span class="string_it">
       Queste analisi sono frutto di una collaborazione tra i ricercatori dei <a href="https://csl.sony.fr" target="_blank">Computer Science Labs di Parigi</a> e di <a href="https://csl.sony.it/" target="_blank">Roma</a> (<a href="https://csl.sony.fr/team/martina-galletti/" target="_blank">Martina Galletti</a>, <a href="https://csl.sony.fr/team/giulio-prevedello/" target="_blank">Giulio Prevedello</a>, <a href="https://csl.sony.fr/team/dr-pietro-gravino/" target="_blank">Pietro Gravino</a>), del <a href="https://cref.it" target="_blank">Centro Ricerche Enrico Fermi</a> (<a href="mailto:emanuele.brugnoli@cref.it" target="_blank">Emanuele Brugnoli</a>) e di <a href="https://www.uniroma1.it" target="_blank">Sapienza - Università di Roma</a> (<a href="mailto:losardor+sonycsl@gmail.com" target="_blank">Ruggiero Lo Sardo</a>).
+      </span>
    </p>
 <center>
    <a href="https://csl.sony.it/" target="_blank"><img src="./temp_title/logo.png" style="width: 60%; margin: 1%;"></a>
@@ -137,31 +148,33 @@ Scopri le nostre analisi:
 <!--      <h1>
          <span >  Speciale Elezioni Italiane 2022 <span class="material-symbols-outlined" style="vertical-align:top; font-size: larger;"> how_to_vote </span></span>
       </h1>-->
-      <img style="width: 600px;" src="temp_title/21.jpg">
+      <span class="string_it"><img style="width: 600px;" src="temp_title/21.jpg"></span>
    </center>
    <p>
-      Le nuove tecnologie dell'informazione stanno cambiando ogni aspetto delle nostre vite, inclusa la politica.
+      <span class="string_it">Le nuove tecnologie dell'informazione stanno cambiando ogni aspetto delle nostre vite, inclusa la politica.
       Negli ultimi anni, abbiamo visto la comunicazione politica evolvere ad un ritmo vertiginoso, nel tentativo di adattarsi alle opportunità –non prive di rischi– offerte dai social media.
       Nonostante il loro impatto dirompente, queste tecnologie ci offrono gli strumenti per comprendere l’effetto di questo cambiamento.
-      Grazie all’analisi statistica sui megadati dei social network, possiamo interrogare molti aspetti della comunicazione politica che prima risultavano inaccessibili.
+      Grazie all’analisi statistica sui megadati dei social network, possiamo interrogare molti aspetti della comunicazione politica che prima risultavano inaccessibili.</span>
    </p>
    <p>
-      Siccome il dibattito politico si rivolge spesso al territorio, abbiamo misurato in che modo l'informazione locale copra la politica, con particolare attenzione allo spazio dato ai diversi partiti.
+      <span class="string_it">Siccome il dibattito politico si rivolge spesso al territorio, abbiamo misurato in che modo l'informazione locale copra la politica, con particolare attenzione allo spazio dato ai diversi partiti.
       Inoltre, abbiamo analizzato come la politica stessa cerchi il contatto con i temi ed il linguaggio locale. Quindi abbiamo confrontato il linguaggio di diversi politici per identificare argomenti comuni e parole chiave distintive.
       Le piattaforme social permettono anche la misurazione dell’interazione tra politici e i loro follower, dunque abbiamo potuto verificare quali reazioni i post dei politici abbiano prodotto tra gli utenti.
-      Infine, abbiamo studiato la comunicazione tra politici, ovvero in che modo si chiamano in causa, si rispondono –o si ignorano– l'un l'altro, nella fitta rete di interazioni della politica italiana.
+      Infine, abbiamo studiato la comunicazione tra politici, ovvero in che modo si chiamano in causa, si rispondono –o si ignorano– l'un l'altro, nella fitta rete di interazioni della politica italiana.</span>
    </p>
    <center>
-   <a onClick="newSite('cop.html')" class="mainbutton"><span class="material-symbols-outlined"> travel_explore </span><br> Dove si parla di politica?</a>
-   <a onClick="newSite('dia.html')" class="mainbutton"><span class="material-symbols-outlined"> person_pin_circle </span><br> Il dialetto politico</a>
-   <a onClick="newSite('par.html')" class="mainbutton"><span class="material-symbols-outlined"> forum </span><br> Scontro all'ultima parola</a><br>
-   <a onClick="newSite('rea.html')" class="mainbutton"><span class="material-symbols-outlined"> add_reaction </span><br> Reazioni social</a>
-   <a onClick="newSite('int.html')" class="mainbutton"><span class="material-symbols-outlined"> alternate_email </span><br> Chi parla con chi</a>
-   <a onClick="newSite('dat.html')" class="mainbutton"><span class="material-symbols-outlined"> database </span><br> Dati e ringraziamenti</a>
+   <a onClick="newSite('cop.html')" class="mainbutton"><span class="material-symbols-outlined"> travel_explore </span> <p class="string_it"> Dove si parla di politica? </p></a>
+   <a onClick="newSite('dia.html')" class="mainbutton"><span class="material-symbols-outlined"> person_pin_circle </span> <p class="string_it"> Il dialetto politico</p></a>
+   <a onClick="newSite('par.html')" class="mainbutton"><span class="material-symbols-outlined"> forum </span> <p class="string_it"> Scontro all'ultima parola</p></a><br>
+   <a onClick="newSite('rea.html')" class="mainbutton"><span class="material-symbols-outlined"> add_reaction </span> <p class="string_it"> Reazioni social</p></a>
+   <a onClick="newSite('int.html')" class="mainbutton"><span class="material-symbols-outlined"> alternate_email </span> <p class="string_it"> Chi parla con chi</p></a>
+   <a onClick="newSite('dat.html')" class="mainbutton"><span class="material-symbols-outlined"> database </span> <p class="string_it"> Dati e ringraziamenti</p></a>
    </center>
    <p>
+      <span class="string_it">
       Queste analisi sono frutto di una collaborazione tra i ricercatori dei <a href="https://csl.sony.fr" target="_blank">Computer Science Labs di Parigi</a> e di <a href="https://csl.sony.it/" target="_blank">Roma</a> (<a href="https://csl.sony.fr/team/martina-galletti/" target="_blank">Martina Galletti</a>, <a href="https://csl.sony.fr/team/giulio-prevedello/" target="_blank">Giulio Prevedello</a>, <a href="https://csl.sony.fr/team/dr-pietro-gravino/" target="_blank">Pietro Gravino</a>), del <a href="https://cref.it" target="_blank">Centro Ricerche Enrico Fermi</a> (<a href="mailto:emanuele.brugnoli@cref.it" target="_blank">Emanuele Brugnoli</a>) e di <a href="https://www.uniroma1.it" target="_blank">Sapienza - Università di Roma</a> (<a href="mailto:losardor+sonycsl@gmail.com" target="_blank">Ruggiero Lo Sardo</a>). Infosfera è  la linea di ricerca interna a Sony CSL, che studia in modo trasversale i temi legati al mondo dell’informazione, per maggiori informazioni <a href="https://csl.sony.it/infosphere/" target="_blank" >clicca qui</a>.
-      Leggi lo studio correlato: <a href="https://www.nature.com/articles/s41562-022-01353-3" target="_blank" >domanda ed offerta di informazione ai tempi del COVID.</a>      
+      Leggi lo studio correlato: <a href="https://www.nature.com/articles/s41562-022-01353-3" target="_blank" >domanda ed offerta di informazione ai tempi del COVID.</a>
+      </span>
    </p>
    <center>
       <a href="https://csl.sony.it/" target="_blank"><img src="./temp_title/logo.png" style="width: 200px; margin: 10px;"></a>
